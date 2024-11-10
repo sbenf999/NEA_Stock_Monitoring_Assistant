@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.NEAStockMonitoringAssistant" parent="Base.Theme.NEAStockMonitoringAssistant" />
+
+    <style name="Theme.NEAStockMonitoringAssistant.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.NEAStockMonitoringAssistant.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.NEAStockMonitoringAssistant.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

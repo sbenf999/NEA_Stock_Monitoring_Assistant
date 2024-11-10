@@ -13,6 +13,15 @@
         android:theme="@style/Theme.NEAStockMonitoringAssistant"
         tools:targetApi="31">
         <activity
+            android:name=".HomeScreen"
+            android:exported="false"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/Theme.NEAStockMonitoringAssistant" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
