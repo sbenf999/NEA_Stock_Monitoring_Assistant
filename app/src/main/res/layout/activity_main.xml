@@ -71,7 +71,7 @@
         android:id="@+id/appLogoText"
         android:layout_width="323dp"
         android:layout_height="53dp"
-        android:text="OneStop Stock Monitoring Assistant"
+        android:text="Onestop Stock Monitoring Assistant"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

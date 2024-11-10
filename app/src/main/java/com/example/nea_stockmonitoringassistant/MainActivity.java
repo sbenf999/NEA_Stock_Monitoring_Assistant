@@ -38,33 +38,26 @@ public class MainActivity extends AppCompatActivity {
         mEditUsername = findViewById(R.id.usernameInput);
         mEditPassword = findViewById(R.id.passwordInput);
 
-        mButton.setOnClickListener(
-                new View.OnClickListener()
-                {
-                    public void onClick(View view)
-                    {
-                        String inputtedUsername = mEditUsername.getText().toString();
-                        String inputtedPassword = String.valueOf(mEditPassword.getText());
+        String inputtedUsername = mEditUsername.getText().toString();
+        String inputtedPassword = String.valueOf(mEditPassword.getText());
 
-                        if (inputtedUsername.equals("admin") & inputtedPassword.equals("1234")) {
-                            Log.v("EditText", mEditUsername.getText().toString());
-                            Log.v("EditText", mEditPassword.getText().toString());
+        if (inputtedUsername.equals("admin") & inputtedPassword.equals("1234")) {
+            Log.v("EditText", mEditUsername.getText().toString());
+            Log.v("EditText", mEditPassword.getText().toString());
 
-                            Intent intent = new Intent(MainActivity.this, HomeScreen.class);
-                            startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, HomeScreen.class);
+            startActivity(intent);
 
-                        } else {
-                            System.out.println("Incorrect username or password");
+        } else {
+            System.out.println("Incorrect username or password");
 
-                            CharSequence text = "Incorrect username or password";
-                            int duration = Toast.LENGTH_SHORT;
+            CharSequence text = "Incorrect username or password";
+            int duration = Toast.LENGTH_SHORT;
 
-                            Toast toast = Toast.makeText(getApplicationContext(), text, duration);
-                            toast.show();
-                        }
+            Toast toast = Toast.makeText(getApplicationContext(), text, duration);
+            toast.show();
+        }
 
-                    }
-                });
     }
 
     //forgot password function for button
