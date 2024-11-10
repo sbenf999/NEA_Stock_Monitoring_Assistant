@@ -35,4 +35,9 @@ public class HomeScreen extends AppCompatActivity {
 
     public void Settings(View view) {
     }
+
+    public void Logout(View view) {
+        Intent intent = new Intent(HomeScreen.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

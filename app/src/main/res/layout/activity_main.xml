@@ -7,22 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/passwordInput"
-        android:layout_width="336dp"
-        android:layout_height="48dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="numberPassword"
+    <Button
+        android:id="@+id/forgotPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="forgotPassword"
+        android:text="Forgot password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338"
-        app:passwordToggleEnabled="true"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintVertical_bias="0.588"
+        tools:ignore="HardcodedText,OnClick" />
 
     <EditText
         android:id="@+id/usernameInput"
@@ -36,48 +33,61 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.251"
+        app:layout_constraintVertical_bias="0.39"
         tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/forgotPasswordButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot password"
-        android:onClick="forgotPassword"
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="336dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="numberPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448"
-        tools:ignore="HardcodedText,OnClick" />
+        app:layout_constraintVertical_bias="0.478"
+        app:passwordToggleEnabled="true"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
         android:onClick="login"
+        android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448"
+        app:layout_constraintVertical_bias="0.588"
         tools:ignore="HardcodedText,OnClick" />
 
     <TextView
         android:id="@+id/appLogoText"
         android:layout_width="323dp"
         android:layout_height="53dp"
-        android:text="OneStop Stock Monitoring Assistant (SMA)"
+        android:text="OneStop Stock Monitoring Assistant"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintVertical_bias="0.262" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="213dp"
+        android:layout_height="169dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
