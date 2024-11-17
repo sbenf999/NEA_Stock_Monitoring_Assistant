@@ -7,65 +7,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".HomeScreen">
 
-    <Button
-        android:id="@+id/recordDeliveryButton"
-        style="@style/Widget.Material3.Button"
-        android:layout_width="153dp"
-        android:layout_height="159dp"
-        android:onClick="recordDelivery"
-        android:shape="oval"
-        android:text="Record Delivery"
-        app:cornerRadius="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182" />
-
-    <Button
-        android:id="@+id/stockCountingButton"
-        style="@style/Widget.Material3.Button"
-        android:layout_width="153dp"
-        android:layout_height="159dp"
-        android:onClick="stockCounting"
-        android:text="Stock Counting"
-        app:cornerRadius="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504" />
-
-    <Button
-        android:id="@+id/dataViewButton"
-        style="@style/Widget.Material3.Button"
-        android:layout_width="153dp"
-        android:layout_height="159dp"
-        android:onClick="dataView"
-        android:text="Data View"
-        app:cornerRadius="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/settingsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:contentDescription="Settings"
-        android:focusable="true"
-        android:onClick="openSettings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/gear_solid" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/logoutButton"
         android:layout_width="wrap_content"
@@ -86,13 +27,146 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hi, "
+        android:layout_marginStart="16dp"
+        android:text="Hi administrator!"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/settingsButton"
-        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/settingsButton"
-        app:layout_constraintVertical_bias="0.567" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Button
+        android:id="@+id/profitMarginsButton"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:text="Profit Margins"
+        app:layout_constraintBottom_toBottomOf="@+id/dataViewButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toEndOf="@+id/recordDeliveryButton"
+        app:layout_constraintTop_toTopOf="@+id/dataViewButton" />
+
+    <Button
+        android:id="@+id/dataViewButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:onClick="dataView"
+        android:text="Data View"
+        app:cornerRadius="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <Button
+        android:id="@+id/addProductButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:onClick="dataView"
+        android:text="Add product"
+        app:cornerRadius="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/addSupplierButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:onClick="dataView"
+        android:text="Add supplier"
+        app:cornerRadius="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/weeklyReportButton"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:text="Weekly Report"
+        app:layout_constraintBottom_toBottomOf="@+id/stockCountingButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toEndOf="@+id/recordDeliveryButton"
+        app:layout_constraintTop_toTopOf="@+id/stockCountingButton" />
+
+    <Button
+        android:id="@+id/stockCountingButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:onClick="stockCounting"
+        android:text="Stock Counting"
+        app:cornerRadius="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.335" />
+
+    <TextView
+        android:id="@+id/recentTasksText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recent tasks"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596" />
+
+    <TextView
+        android:id="@+id/yourToolsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Your tools"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <Button
+        android:id="@+id/recordDeliveryButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:onClick="recordDelivery"
+        android:shape="oval"
+        android:text="Record Delivery"
+        app:cornerRadius="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.242" />
+
+    <Button
+        android:id="@+id/manageAccountsButton"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:text="Manage accounts"
+        app:layout_constraintBottom_toBottomOf="@+id/recordDeliveryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toEndOf="@+id/recordDeliveryButton"
+        app:layout_constraintTop_toTopOf="@+id/recordDeliveryButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
