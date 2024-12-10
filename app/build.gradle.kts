@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(files("/Users/somabenfell/Downloads/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0.jar"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

@@ -14,6 +14,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 public class MainActivity extends AppCompatActivity {
 
     Button mButton;
@@ -34,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
     //login function for button
     public void login(View view) {
+
+        String connectionString = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+        //establish a connection to a MySQL database using the JDBC driver
+        Connection con = DriverManager.getConnection(connectionString, username, password);
+
         mButton = findViewById(R.id.loginButton);
         mEditUsername = findViewById(R.id.usernameInput);
         mEditPassword = findViewById(R.id.passwordInput);
