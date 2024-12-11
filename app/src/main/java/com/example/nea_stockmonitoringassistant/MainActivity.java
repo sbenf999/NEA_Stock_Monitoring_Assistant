@@ -14,8 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,15 +33,49 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+    
 
     //login function for button
     public void login(View view) {
 
-        String connectionString = "jdbc:mysql://localhost:3306/mydatabase";
-        String username = "myusername";
-        String password = "mypassword";
+        String connectionString = "jdbc:mysql://localhost:3306/nea";
+        String username = "root";
+        String password = "BeltMadness3";
         //establish a connection to a MySQL database using the JDBC driver
-        Connection con = DriverManager.getConnection(connectionString, username, password);
+
+        Connection connection = null;
+        try {
+            // below two lines are used for connectivity.
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(
+                    "String URL= \"jdbc:mysql://192.168.0.142:3306/nea\";\n",
+                    "root", "BeltMadness3");
+
+            // mydb is database
+            // mydbuser is name of database
+            // mydbuser is password of database
+
+            Statement statement;
+            statement = connection.createStatement();
+            ResultSet resultSet;
+            resultSet = statement.executeQuery(
+                    "select * from Persons");
+            int code;
+            String title;
+            while (resultSet.next()) {
+                code = resultSet.getInt("PersonID");
+                title = resultSet.getString("title").trim();
+                System.out.println("Code : " + code);
+            }
+            System.out.println("HI!");
+            resultSet.close();
+            statement.close();
+            connection.close();
+        }
+        catch (Exception exception) {
+            System.out.println(exception);
+        }
+
 
         mButton = findViewById(R.id.loginButton);
         mEditUsername = findViewById(R.id.usernameInput);
